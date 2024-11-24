@@ -1,0 +1,47 @@
+<article class="post">
+    <h3><a href="csharp-unity-game-dev-101.html">C# ve Unity ile Oyun Geliştirme 101</a></h3>
+    <p class="meta">Yazar: Bilal Eroğlu | Tarih: 10 Kasım 2024 | Kategori: Oyun Geliştirme</p>
+    <p class="description">C# ve Unity kullanarak oyun geliştirme sürecine dair temel bilgileri öğrenebilirsiniz. Oyun dünyasına adım atmaya başlıyoruz. Hadi gelin, birlikte basit bir oyun yapalım! Unity oyun motorunun gücünü kullanarak temel oyun mekaniği ve programlama konseptleri hakkında bilgiler vereceğiz.</p>
+    <a href="csharp-unity-game-dev-101.html" class="read-more">Devamını Oku</a>
+</article>
+
+<!-- Devamını Oku sayfası - Unity ve C# -->
+<article class="post-detail">
+    <h2>C# ve Unity ile Oyun Geliştirme 101</h2>
+    <p>Unity, oyun geliştirmek için kullanılan en popüler ve güçlü oyun motorlarından biridir. C# programlama dili ile birlikte, Unity oyun motoru, hem 2D hem de 3D oyunlar yaratmak için mükemmel bir platform sağlar. Bu yazıda, Unity'nin arayüzüne, temel özelliklerine ve ilk oyun projenizi nasıl başlatacağınızı öğreneceksiniz.</p>
+
+    <p>Unity, hem yeni başlayanlar hem de profesyonel geliştiriciler için ideal bir ortam sunar. İlk başta, Unity Editor'ü tanıyacak ve temel bileşenler hakkında bilgi edineceksiniz. Sahne yönetimi, oyun nesneleri, materyaller ve ışıklandırma gibi temel özelliklerle tanışacaksınız. Bu bilgiler, oyun geliştirme sürecinizdeki ilk adımlar olacaktır.</p>
+
+    <p><strong>Oyun Geliştirmeye Başlarken</strong><br>
+    Oyun yapmaya başlamadan önce, temel oyun mekaniği hakkında bilgi sahibi olmanız önemlidir. Unity ile oyun geliştirmek için, oyun nesnelerini yerleştirme, bu nesnelerin davranışlarını programlama ve bu davranışları C# ile kodlama gerekmektedir. Bu yazıda, ilk oyun karakterinizi nasıl oluşturacağınızı ve bu karakterin hareket etmesini sağlayacak basit bir C# kodu yazacağız.</p>
+
+    <p><strong>Örnek: Birinci Kişilik Hareket Sistemi</strong><br>
+    Unity oyun motorunda, oyuncu karakterini hareket ettirebilmek için birkaç temel adımı takip etmelisiniz. Öncelikle, bir karakter modeline ve bir kamera sistemine ihtiyacınız olacak. Ardından, bu karakterin klavye girişlerine tepki vermesini sağlayacak C# kodunu yazacağız. İşte örnek bir kod parçası:</p>
+
+    <pre><code>
+using UnityEngine;
+
+public class PlayerController : MonoBehaviour
+{
+    public float speed = 5.0f;
+    
+    void Update()
+    {
+        // Yatay ve dikey eksende girişleri al
+        float horizontal = Input.GetAxis("Horizontal");
+        float vertical = Input.GetAxis("Vertical");
+
+        // Karakteri hareket ettir
+        Vector3 movement = new Vector3(horizontal, 0.0f, vertical) * speed * Time.deltaTime;
+        transform.Translate(movement);
+    }
+}
+</code></pre>
+
+    <p>Bu basit C# kodu, klavye ok tuşları ya da W, A, S, D tuşlarıyla karakterinizi hareket ettirebileceğiniz bir sistem kurar. Bu kodda, <code>Input.GetAxis()</code> fonksiyonu, kullanıcıdan gelen girişleri alır ve karakterin o doğrultuda hareket etmesini sağlar. Bu temel hareket sistemi, birçok oyun türünde kullanılan temel bir mekanizmadır.</p>
+
+    <p><strong>Gelecek Adımlar</strong><br>
+    Bu yazıda, oyun geliştirmeye başlamak için gerekli temel bilgileri öğrendik. Gelecek yazılarımızda, bu temel bilgileri kullanarak daha gelişmiş sistemler ve oyun mekaniği ekleyeceğiz. Örneğin, karakterin zıplama ve düşme özellikleri, düşman yapay zekâsı ve kullanıcı arayüzü gibi konularda derinlemesine bilgilere yer vereceğiz.</p>
+    
+    <p>Unity ve C# kullanarak oyun geliştirme serüvenine başlamak için harika bir yolculuk yaptınız! Bu yazıdan öğrendiğiniz temel bilgileri pekiştirerek, daha büyük projelere adım atabilirsiniz. Eğer Unity'yi ve C#'ı daha derinlemesine öğrenmek istiyorsanız, kurslar ve örnek projelerle kendinizi geliştirebilirsiniz.</p>
+</article>

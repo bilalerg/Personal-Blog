@@ -1,0 +1,94 @@
+<article class="post">
+    <h3><a href="ai-reinforcement-learning-101.html">Yapay Zeka ve Reinforcement Learning 101</a></h3>
+    <p class="meta">Yazar: Bilal Eroğlu | Tarih: 15 Kasım 2024 | Kategori: Yapay Zeka</p>
+    <p class="description">Yapay zeka ve reinforcement learning hakkında temel bilgileri ve uygulama örneklerini öğreneceksiniz. Yapay zeka dünyasında nasıl ilerleyebilirsiniz? Bu yazı buna dair ipuçları veriyor. AI ve RL'nin nasıl çalıştığını, hangi uygulama alanlarında kullanıldığını ve bu alanda kariyer yapmanın yollarını keşfedeceğiz.</p>
+    <a href="ai-reinforcement-learning-101.html" class="read-more">Devamını Oku</a>
+</article>
+
+<!-- Devamını Oku sayfası - Yapay Zeka ve RL -->
+<article class="post-detail">
+    <h2>Yapay Zeka ve Reinforcement Learning 101</h2>
+    <p>Yapay zeka (AI), makinelerin insan benzeri düşünme ve öğrenme yeteneğine sahip olmasını sağlayan bir teknoloji alanıdır. AI'nin birçok dalı bulunmaktadır, ancak bu yazıda özellikle <strong>Reinforcement Learning (RL)</strong> yöntemine odaklanacağız. Pekiştirmeli öğrenme, bir ajanın çevresiyle etkileşime girerek ödül ve ceza alarak öğrenmesini sağlayan bir makine öğrenimi tekniğidir. Bu yöntem, robotik, oyun teorisi, sağlık hizmetleri ve otomasyon gibi birçok alanda önemli başarılar elde edilmesine olanak tanımaktadır.</p>
+
+    <h3>Reinforcement Learning Nedir?</h3>
+    <p>Reinforcement Learning, bir ajanın çevresiyle etkileşimde bulunarak, en iyi kararları almak için ödülleri ve cezaları kullanarak öğrenmesini sağlar. RL'nin temel bileşenleri şunlardır:</p>
+    <ul>
+        <li><strong>Ajan:</strong> Öğrenme sürecini gerçekleştiren öğedir. Ajan, çevresini algılar ve ona göre aksiyonlar alır.</li>
+        <li><strong>Çevre:</strong> Ajanın etkileşime girdiği dünya veya ortamdır. Çevre, ajan tarafından alınan aksiyonlara tepki verir.</li>
+        <li><strong>Eylemler:</strong> Ajanın çevreyle etkileşime girerek yaptığı seçimlerdir. Her aksiyon, ajanın çevresiyle olan ilişkisinde bir değişikliğe yol açar.</li>
+        <li><strong>Ödül (Reward):</strong> Ajan, çevresindeki durumları iyileştiren eylemler gerçekleştirdiğinde ödül alır. Bu, ajanın doğru seçimler yapması için teşvik edici bir güçtür.</li>
+        <li><strong>Politika (Policy):</strong> Ajanın bir durumdan diğerine geçerken ne yapacağına karar veren bir stratejidir. Politika, ajan için en iyi aksiyonları belirler.</li>
+        <li><strong>Değer Fonksiyonu (Value Function):</strong> Her durumun, ajanın gelecekteki ödüllerine göre değerini hesaplar. Bu fonksiyon, ajanın hangi durumlarda nasıl hareket etmesi gerektiğini belirler.</li>
+    </ul>
+
+    <h3>Reinforcement Learning Nerelerde Kullanılır?</h3>
+    <p>Reinforcement Learning, birçok alanda büyük potansiyele sahip bir tekniktir. En yaygın uygulama alanları şunlardır:</p>
+    <ul>
+        <li><strong>Robotik:</strong> RL, robotların çevreleriyle etkileşime girerek görevleri öğrenmesini sağlar. Örneğin, bir robotun odayı temizlemek için en verimli yolu öğrenmesi sağlanabilir.</li>
+        <li><strong>Oyunlar:</strong> RL, oyun dünyasında ajanın en iyi stratejiyi öğrenmesine yardımcı olur. AlphaGo gibi projeler, RL'nin oyunlarda nasıl büyük başarılar elde edebileceğini gösteren önemli örneklerdir.</li>
+        <li><strong>Otonom Araçlar:</strong> Otonom araçların yol alırken karşılaştığı durumları analiz ederek, RL algoritmaları bu araçların daha verimli ve güvenli şekilde sürmesini sağlar.</li>
+        <li><strong>Finans:</strong> Portföy yönetimi ve ticaret stratejilerinde, RL algoritmaları yatırım kararlarını optimize etmek için kullanılır.</li>
+        <li><strong>Sağlık:</strong> İlaç keşfi, hastalık teşhisi ve tedavi planlaması gibi alanlarda RL, daha doğru ve etkili sonuçlar elde edilmesine olanak tanır.</li>
+    </ul>
+
+    <h3>Reinforcement Learning Algoritmalarına Giriş</h3>
+    <p>Reinforcement Learning'de kullanılan bazı temel algoritmalar şunlardır:</p>
+    <ul>
+        <li><strong>Q-Learning:</strong> Bu algoritma, bir değer tablosu oluşturur ve her durumda alınacak eylemleri belirlemek için bu tablodan faydalanır. Q-learning, model-free bir algoritmadır, yani çevre hakkında herhangi bir bilgiye ihtiyaç duymaz.</li>
+        <li><strong>Deep Q-Networks (DQN):</strong> Derin öğrenme kullanarak Q-learning algoritmasını geliştiren bir yaklaşımdır. DQN, büyük veri setleri ve karmaşık çevrelerde daha iyi performans gösterir.</li>
+        <li><strong>Policy Gradient Methods:</strong> Ajanın politikalarını doğrudan optimize eden bir tekniktir. Ajanın ne yapması gerektiğini öğrenmesini sağlar.</li>
+        <li><strong>Actor-Critic Methods:</strong> Hem politika (actor) hem de değer fonksiyonunu (critic) kullanarak daha hızlı öğrenme sağlar. Bu yöntem, derin öğrenme ve RL'yi birleştirir.</li>
+    </ul>
+
+    <h3>Örnek Uygulama: Basit Bir RL Modeli</h3>
+    <p>Şimdi, RL algoritmalarını daha iyi anlamak için basit bir Python örneği üzerinden gideceğiz. Bu örnekte, bir ajan doğru hareketi öğrenmek için ödüllerle pekiştirme yapacak:</p>
+
+    <pre><code>import random
+
+# Ortam: 0, 1, 2, 3 durumu (4 farklı durum)
+states = [0, 1, 2, 3]
+# Aksiyonlar: 0 ve 1 (sağa gitme, sola gitme)
+actions = [0, 1]
+# Ödüller: Doğru hareket için 1, yanlış hareket için -1
+rewards = {0: -1, 1: 1, 2: 0, 3: -1}
+
+# Q-Tablosu: Her durumu ve aksiyonu içeren bir tablonun başlangıcı
+Q_table = {state: [0, 0] for state in states}
+
+# Ajanın öğrenme oranı ve keşif oranı
+learning_rate = 0.1
+exploration_rate = 0.2
+
+# Ajanın her durumda bir aksiyon seçmesi
+def select_action(state):
+    if random.random() < exploration_rate:
+        return random.choice(actions)  # Rastgele aksiyon seç
+    else:
+        return actions[Q_table[state].index(max(Q_table[state]))]  # En yüksek Q-değerine sahip aksiyonu seç
+
+# Q-learning algoritması
+def q_learning(episodes):
+    for episode in range(episodes):
+        state = random.choice(states)  # Başlangıç durumu
+        done = False
+        while not done:
+            action = select_action(state)
+            next_state = (state + action) % 4  # Basit bir çevre: döngüsel
+            reward = rewards[next_state]
+            Q_table[state][action] = Q_table[state][action] + learning_rate * (reward + max(Q_table[next_state]) - Q_table[state][action])
+            state = next_state
+            if state == 0:  # Belirli bir durumda sonlanma
+                done = True
+
+# Modeli eğitme
+q_learning(1000)
+
+# Q-Tablosu
+print(Q_table)
+</code></pre>
+
+    <p>Yukarıdaki örnekte, ajan, ödüllerle pekiştirmeli öğrenme yaparak çevresinde en iyi hareketi öğreniyor. Bu, basit bir RL algoritmasının nasıl çalıştığını anlamanıza yardımcı olacaktır.</p>
+
+    <h3>Sonuç</h3>
+    <p>Reinforcement Learning, yapay zeka alanında çok heyecan verici bir tekniktir ve özellikle robotik, oyun ve otonom sistemlerde büyük ilerlemelere yol açmıştır. Bu yazıda, RL'nin temel kavramlarını, kullanım alanlarını ve algoritmalarını öğrendik. Ayrıca, Python'da basit bir Q-learning uygulaması ile pekiştirmeli öğrenmenin nasıl işlediğini gördük. Yapay zeka alanında derinlemesine bilgi sahibi olmak isteyenler için bu, harika bir başlangıçtır. Sonraki adım olarak, daha karmaşık algoritmalar ve gerçek dünya uygulamaları üzerine çalışabilirsiniz!</p>
+</article>

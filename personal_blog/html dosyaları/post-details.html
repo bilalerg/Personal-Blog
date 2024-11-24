@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yazı Detayı</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Yazının Başlığı</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Anasayfa</a></li>
+                <li><a href="blog-posts.html">Blog Yazıları</a></li>
+                <li><a href="gallery.html">Galeri</a></li>
+                <li><a href="about.html">Hakkında</a></li>
+                <li><a href="contact.html">İletişim</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="post-details">
+            <h2>Yazının Başlığı</h2>
+            <p><strong>Yazar:</strong> Bilal Eroğlu</p>
+            <p><strong>Tarih:</strong> 13 Kasım 2024</p>
+            <p>Yazının tam içeriği burada olacak...</p>
+        </section>
+
+        <section class="comments">
+            <h3>Yorumlar</h3>
+            <form id="comment-form" onsubmit="return submitComment()">
+                <label for="comment">Yorum Yaz:</label>
+                <textarea id="comment" name="comment" required></textarea><br>
+                <button type="submit">Gönder</button>
+            </form>
+            <div id="comment-list">
+                <!-- Yorumlar buraya dinamik olarak eklenecek -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Kişisel Blog</p>
+    </footer>
+
+    <script src="..javascript/script.js"></script>
+</body>
+</html>
